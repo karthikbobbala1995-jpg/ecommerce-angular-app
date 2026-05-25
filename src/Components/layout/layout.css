@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    background-color: aquamarine;
+    padding: 16px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo h3 {
+    font-size: 28px;
+    margin: 0;
+}
+.cart button {
+    padding: 12px 24px;
+    border:none;
+    background-color: cadetblue;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cart button:hover {
+    background-color: rgb(63,126,128);
+}

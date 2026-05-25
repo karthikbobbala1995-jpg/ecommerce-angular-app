@@ -1,0 +1,53 @@
+<!-- <div class="container">
+    <div class="main__list">
+        @for (item of products(); track $index) {
+            <div class="product_item">{{item.title}}</div>
+            <div class="product_img">
+                <img src={{item.image}} class="image"/>
+            </div>
+            <div class="product_category">
+                <p>{{item.description}}</p>
+            </div>
+        }
+    </div>
+</div> -->
+
+<div class="container">
+
+    <div class="main__list">
+
+        @for (item of products(); track item.id) {
+
+        <div class="product_card">
+
+            <div class="product_img">
+                <img [src]="item.image" class="image" />
+            </div>
+
+            <div class="product_content">
+
+                <h3>{{ item.title }}</h3>
+
+                <p class="category">
+                    {{ item.category }}
+                </p>
+
+                <p class="description">
+                    {{ item.description }}
+                </p>
+
+                <h4 class="price">
+                    ${{ item.price }}
+                </h4>
+
+                <button (click)="handleToCart(item)">Add To Cart</button>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>

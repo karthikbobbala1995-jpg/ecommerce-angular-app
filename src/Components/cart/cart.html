@@ -1,0 +1,43 @@
+<div class="container">
+
+    @for (item of cartList(); track item.id) {
+
+        <div class="cart_card">
+
+            <!-- Left Side Image -->
+            <div class="cart_image">
+                <img [src]="item.image" alt="product" />
+            </div>
+
+            <!-- Right Side Content -->
+            <div class="cart_content">
+
+                <h2>{{ item.title }}</h2>
+
+                <p class="category">
+                    {{ item.category }}
+                </p>
+
+                <p class="description">
+                    {{ item.description }}
+                </p>
+
+                <div class="bottom_section">
+
+                    <h3 class="price">
+                        ${{ item.price }}
+                    </h3>
+
+                    <button (click)="handleRemoveProduct(item)">
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    }
+
+</div>
