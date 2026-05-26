@@ -18,7 +18,7 @@
 
         @for (item of products(); track item.id) {
 
-        <div class="product_card">
+        <div class="product_card" (click)="handleSingleProduct(item)">
 
             <div class="product_img">
                 <img [src]="item.image" class="image" />

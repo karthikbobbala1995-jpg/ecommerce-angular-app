@@ -1,1 +1,41 @@
-<p>product-list works!</p>
+<div class="container">
+
+    <div class="single_product">
+
+        <div class="left">
+
+            <img [src]="product()?.image" 
+                 [alt]="product()?.title">
+
+        </div>
+
+        <div class="right">
+
+            <h2>{{ product()?.title }}</h2>
+
+            <p class="category">
+                {{ product()?.category }}
+            </p>
+
+            <h3 class="price">
+                ${{ product()?.price }}
+            </h3>
+
+            <div class="rating">
+                ⭐ {{ product()?.rating?.rate }}
+                ({{ product()?.rating?.count }} reviews)
+            </div>
+
+            <p class="description">
+                {{ product()?.description }}
+            </p>
+
+            <button (click)="handleToCart(product())">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

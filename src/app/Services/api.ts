@@ -12,4 +12,7 @@ export class Api {
   getAllProducts() {
     return this.http.get(this.BASEURL);
   }
+  productById(id:any){
+    return this.http.get(`${this.BASEURL}/${id}`)
+  }
 }
